@@ -7,7 +7,7 @@
     <item
         android:id="@+id/compatibilityFragment"
         android:icon="@drawable/ic_baseline_radio_button_checked_24"
-        android:title=".Compatibilidad"/>
+        android:title=".Suerte"/>
     <item
         android:id="@+id/informationFragment"
         android:icon="@drawable/ic_baseline_perm_device_information_24"

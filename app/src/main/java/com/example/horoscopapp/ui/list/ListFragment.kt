@@ -7,19 +7,33 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import com.example.horoscopapp.R
+import com.example.horoscopapp.databinding.FragmentListBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class ListFragment : Fragment() {
 
     private val viewModel by viewModels<ListViewModel>()
-    
+    private var _binding: FragmentListBinding? = null
+    private  val binding get() = _binding!!
+
+    //listeners
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding.btnAries.setOnClickListener {  }
+
+        binding.btnCapricornio.setOnClickListener {  }
+
+        binding.btnLeo.setOnClickListener {  }
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_list, container, false)
+        _binding = FragmentListBinding.inflate(inflater,container,false)
+        return binding.root
     }
 
 

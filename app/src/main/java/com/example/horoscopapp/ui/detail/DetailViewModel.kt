@@ -1,9 +1,10 @@
-package com.example.horoscopapp.ui.compatibility
+package com.example.horoscopapp.ui.detail
 
 import androidx.lifecycle.ViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
 @HiltViewModel
-class CompatibilityViewModel @Inject constructor(): ViewModel() {
+class DetailViewModel @Inject constructor(): ViewModel(){
+
 }
