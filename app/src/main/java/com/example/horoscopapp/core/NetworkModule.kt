@@ -9,9 +9,17 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Singleton
 
+
 @Module
 @InstallIn(SingletonComponent::class)
 object NetworkModule {
+    @Provides
+    @Singleton
+    fun provideOkHttpClient(){
+        //val interceptor = HttpLoggingInterceptor()
+        //interceptor.setLevel()
+    }
+
     @Provides
     @Singleton
     fun provideRetrofit(): Retrofit = Retrofit
